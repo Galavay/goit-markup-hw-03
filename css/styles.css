@@ -16,6 +16,7 @@
 }
 
 body {
+  margin: 0;
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: roboto, sans-serif;
@@ -23,8 +24,11 @@ body {
   font-size: 14px;
 }
 
+/* Утиліти */
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -43,6 +47,8 @@ body {
 /* Logo */
 
 .text {
+  margin-top: 0;
+  margin-bottom: 118px;
   color: var(--text-color);
   line-height: 1.17;
 }
@@ -71,12 +77,44 @@ body {
 }
 /* Site-nav */
 
+.nav-main {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+/* .site-nav .item + .item {
+  margin-right: 50px;
+} */
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+} 
+
 .site-nav .link {
+  display: block;
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .site-nav :hover,
@@ -87,11 +125,14 @@ body {
 
 /* Hero */
 .hero {
+  margin-bottom: 94px;
   text-align: center;
   background-color: var(--footer-bg-color);
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--primary-bg-color);
   font-size: 44px;
   line-height: 1.36;
@@ -101,12 +142,37 @@ body {
 
 /* Sections */
 
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feature-list .item {
+  width: 270px;
+}
+
 .section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+}
+/* display: flex;
+flex-wrap: wrap;
+padding-left: 15px;
+padding-right: 15px;
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+margin-bottom: 50px;
+justify-content: space-between; */
+.work {
+  display: flex;
+  margin-bottom: 94px;
+  justify-content: space-between;
 }
 
 .team {
@@ -114,12 +180,19 @@ body {
 }
 
 .team-title {
+  margin-bottom: 50px;
+  margin-top: 0;
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+.team-list {
+  display:flex;
+  justify-content: space-between;
 }
 
 .team-name {
@@ -152,6 +225,14 @@ body {
 .map:hover,
 .map:focus {
   color: var (--accent-color);
+}
+
+.nav-header {
+  display: flex;
+}
+
+.nav-header .item:not(:last-child) {
+margin-right: 50px;
 }
 
 .nav-header-mail {
@@ -189,6 +270,8 @@ body {
 }
 
 .title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -197,10 +280,16 @@ body {
 
 /* Button */
 
+/* .nav-header .item:not(:last-child) {
+  margin-right: 50px;
+} */
+
+
 .button {
+  justify-content: center;
+  display: flex;
+  border-radius: 4px;
   color: var(--primary-text-color);
-  background-color: var(--button-bg-color);
-  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -209,17 +298,29 @@ body {
   cursor: pointer;
 }
 
-.button.active {
+.button-active {
+  border: 1px solid transparent;
+  padding: 10px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  min-width: 216px;
+  height: 50px;
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
 }
 
-.button.active:hover,
-.button.active:focus {
+.button-active:hover,
+.button-active:focus {
   background-color: #188ce8;
 }
 
 .button.secondary {
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.16;
@@ -269,7 +370,27 @@ body {
   color: var(--accent-color);
 }
 
-.title-portfolio {
+/* Portfolio */
+
+.portfolio-card .list{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+}
+
+
+/* .portfolio-item {
+  width: 370px;
+  background-color: tomato;
+} */
+
+.title-portfolio .list {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -284,3 +405,4 @@ body {
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
+
