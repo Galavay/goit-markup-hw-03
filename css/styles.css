@@ -24,10 +24,35 @@ body {
   font-size: 14px;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+ margin-top: 0;
+  padding: 94px 0;
+}
+
+
+
+
 /* Утиліти */
 .list {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
 }
 
@@ -48,9 +73,9 @@ body {
 
 .text {
   margin-top: 0;
-  margin-bottom: 118px;
+  margin-bottom: 0;
   color: var(--text-color);
-  line-height: 1.17;
+  line-height: 1.71;
 }
 
 .logo {
@@ -77,10 +102,20 @@ body {
 }
 /* Site-nav */
 
+.main-nav {
+  padding-left: 93px;
+}
+
 .nav-main {
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
   width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+.page-header .container {
   display: flex;
   align-items: center;
 }
@@ -88,7 +123,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -125,19 +160,21 @@ body {
 
 /* Hero */
 .hero {
-  margin-bottom: 94px;
   text-align: center;
   background-color: var(--footer-bg-color);
+  padding: 200px 0;
 }
 
 .hero-title {
-  margin-top: 0;
+  width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
   color: var(--primary-bg-color);
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  font-weight: 900;
 }
 
 /* Sections */
@@ -145,6 +182,7 @@ body {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .feature-list .item {
@@ -171,12 +209,12 @@ margin-bottom: 50px;
 justify-content: space-between; */
 .work {
   display: flex;
-  margin-bottom: 94px;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .team {
   background-color: #f5f4fa;
+  padding: 94px 0;
 }
 
 .team-title {
@@ -192,7 +230,7 @@ justify-content: space-between; */
 
 .team-list {
   display:flex;
-  justify-content: space-between;
+  gap: 30px;
 }
 
 .team-name {
@@ -210,15 +248,22 @@ justify-content: space-between; */
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
+.team-li {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-div {
+  padding: 30px 30px;
+  text-align: center;
+}
 /* Contacts */
 
 .map {
   color: var(--primary-bg-color);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
+  line-height: 1.71;
   text-decoration: none;
 }
 
@@ -229,6 +274,7 @@ justify-content: space-between; */
 
 .nav-header {
   display: flex;
+  margin-left: auto;
 }
 
 .nav-header .item:not(:last-child) {
@@ -297,17 +343,17 @@ margin-right: 50px;
   text-decoration: none;
   cursor: pointer;
 }
-
+ 
 .button-active {
-  border: 1px solid transparent;
-  padding: 10px 32px;
+  border: none;
+  padding:10px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
   border-radius: 4px;
   min-width: 216px;
-  height: 50px;
+  cursor: pointer;
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
 }
@@ -338,14 +384,11 @@ margin-right: 50px;
 
 .footer {
   background-color: var(--footer-bg-color);
+  padding: 60px 0;
 }
 
 .nav-footer-mail {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
+  line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
@@ -356,11 +399,7 @@ margin-right: 50px;
 }
 
 .nav-footer-tel {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
+  line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
@@ -370,18 +409,21 @@ margin-right: 50px;
   color: var(--accent-color);
 }
 
+.address-footer {
+  margin-top: 20px;
+  font-style: normal;
+}
 /* Portfolio */
 
 .portfolio-card .list{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  margin-bottom: 50px;
-  justify-content: space-between;
 }
 
 
@@ -406,3 +448,13 @@ margin-right: 50px;
   letter-spacing: 0.03em;
 }
 
+.portfolio-div {
+  padding: 30px 30px;
+  text-align: center;
+  box-sizing: border-box;
+  width: 370px;
+  left: 215px;
+  top: 1130px;
+  background: #FFFFFF;
+  border: 1px solid #EEEEEE;
+}
