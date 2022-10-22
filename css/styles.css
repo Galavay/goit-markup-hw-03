@@ -16,7 +16,6 @@
 }
 
 body {
-  margin: 0;
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: roboto, sans-serif;
@@ -42,8 +41,7 @@ img {
 }
 
 .section {
- margin-top: 0;
-  padding: 94px 0;
+ padding: 94px 0;
 }
 
 
@@ -51,6 +49,9 @@ img {
 
 /* Утиліти */
 .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -77,6 +78,7 @@ img {
   color: var(--text-color);
   line-height: 1.71;
 }
+
 
 .logo {
   font-family: raleway;
@@ -116,6 +118,7 @@ img {
 }
 
 .page-header .container {
+  border-bottom: 1px solid #ECECEC;
   display: flex;
   align-items: center;
 }
@@ -130,7 +133,6 @@ img {
 
 .site-nav {
   display: flex;
-  margin-left: 93px;
 }
 
 /* .site-nav .item + .item {
@@ -239,6 +241,7 @@ justify-content: space-between; */
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 
 .team-text {
@@ -256,7 +259,7 @@ justify-content: space-between; */
 }
 
 .team-div {
-  padding: 30px 30px;
+  padding: 30px 0;
   text-align: center;
 }
 /* Contacts */
@@ -333,15 +336,9 @@ margin-right: 50px;
 
 .button {
   justify-content: center;
+  margin-bottom: 50px;
   display: flex;
-  border-radius: 4px;
-  color: var(--primary-text-color);
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.03em;
-  text-decoration: none;
-  cursor: pointer;
+  gap: 10px;
 }
  
 .button-active {
@@ -365,13 +362,17 @@ margin-right: 50px;
 
 .button.secondary {
   padding: 6px 22px;
-  border: 1px solid transparent;
-  display: block;
+  border: none;
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #212121;
+  background-color: #F5F4FA;;
 }
 
 .button.secondary:hover,
@@ -385,6 +386,10 @@ margin-right: 50px;
 .footer {
   background-color: var(--footer-bg-color);
   padding: 60px 0;
+}
+
+.footer-item {
+  margin-bottom: 9px;
 }
 
 .nav-footer-mail {
@@ -438,6 +443,7 @@ margin-right: 50px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
 }
 
 .list-portfolio {
@@ -449,8 +455,7 @@ margin-right: 50px;
 }
 
 .portfolio-div {
-  padding: 30px 30px;
-  text-align: center;
+  padding: 20px 24px;
   box-sizing: border-box;
   width: 370px;
   left: 215px;
