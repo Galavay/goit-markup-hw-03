@@ -31,7 +31,6 @@ h5,
 h6,
 p {
   margin: 0;
-
 }
 
 img {
@@ -49,9 +48,9 @@ img {
 
 /* Утиліти */
 .list {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 30px; */
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -73,8 +72,6 @@ img {
 /* Logo */
 
 .text {
-  margin-top: 0;
-  margin-bottom: 0;
   color: var(--text-color);
   line-height: 1.71;
 }
@@ -105,7 +102,7 @@ img {
 /* Site-nav */
 
 .main-nav {
-  padding-left: 93px;
+  margin-left: 93px;
 }
 
 .nav-main {
@@ -117,8 +114,11 @@ img {
   align-items: center;
 }
 
-.page-header .container {
+.page-header {
   border-bottom: 1px solid #ECECEC;
+}
+
+.page-header .container {
   display: flex;
   align-items: center;
 }
@@ -132,6 +132,7 @@ img {
 }
 
 .site-nav {
+  gap: 50px;
   display: flex;
 }
 
@@ -139,9 +140,7 @@ img {
   margin-right: 50px;
 } */
 
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-} 
+
 
 .site-nav .link {
   display: block;
@@ -210,6 +209,7 @@ margin-top: 50px;
 margin-bottom: 50px;
 justify-content: space-between; */
 .work {
+  padding-top: 0;
   display: flex;
   gap: 30px;
 }
@@ -319,7 +319,6 @@ margin-right: 50px;
 }
 
 .title {
-  margin-top: 0;
   margin-bottom: 10px;
   font-style: normal;
   font-weight: 700;
@@ -338,7 +337,7 @@ margin-right: 50px;
   justify-content: center;
   margin-bottom: 50px;
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
  
 .button-active {
@@ -388,7 +387,7 @@ margin-right: 50px;
   padding: 60px 0;
 }
 
-.footer-item {
+.footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -420,6 +419,12 @@ margin-right: 50px;
 }
 /* Portfolio */
 
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
 .portfolio-card .list{
   display: flex;
   flex-wrap: wrap;
@@ -437,7 +442,7 @@ margin-right: 50px;
   background-color: tomato;
 } */
 
-.title-portfolio .list {
+.title-portfolio {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
@@ -456,10 +461,6 @@ margin-right: 50px;
 
 .portfolio-div {
   padding: 20px 24px;
-  box-sizing: border-box;
   width: 370px;
-  left: 215px;
-  top: 1130px;
-  background: #FFFFFF;
   border: 1px solid #EEEEEE;
 }
