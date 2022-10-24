@@ -214,6 +214,10 @@ justify-content: space-between; */
   gap: 30px;
 }
 
+.works {
+  padding-top: 0;
+}
+
 .team {
   background-color: #f5f4fa;
   padding: 94px 0;
@@ -365,7 +369,7 @@ margin-right: 50px;
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.16;
+  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
